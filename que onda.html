@@ -1,0 +1,14 @@
+if (command == "adminc/news") {
+            if (!message.member.hasPermission("MANAGE_MESSAGES")) return;
+            message.delete()
+            
+            let embed = new Discord.MessageEmbed()
+            .setTitle(`**¡Bienvenido al canal de horarios! Donde podrás ver cuando serán los horarios de cuando gonza prenda stream.`)
+            .setDescription(`**HORARIOS**)
+            .addField(`Entre las 18:00 pm - 20:00pm (Hora ARG)`, true)
+            .addField(`De lunes a lunes.`, true)
+            .setColor(`RED`)
+            message.channel.send(embed).then(embed => {
+            embed.react(`🙏🏻 `)
+            })
+            }
